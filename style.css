@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+html, body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.full-screen-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Day Mode */
+body.day-mode {
+  background: linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)),
+              url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed;
+  background-size: cover;
+  color: #1c2833;
+}
+
+body.day-mode .theme-toggle-btn,
+body.day-mode .restart-btn {
+  background-color: #ffffff;
+  color: #2c3e50;
+  border: 2px solid #3498db;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+body.day-mode .score-btn {
+  background: #3498db;
+  color: #ffffff;
+}
+
+body.day-mode .choice-btn {
+  background-color: #ffffff;
+  color: #2c3e50;
+  border: 2px solid #2980b9;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+body.day-mode .move-card, body.day-mode .status-box {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Night Mode */
+body.night-mode {
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+              url('https://media.istockphoto.com/id/162515751/photo/moon-over-mountains.jpg?s=612x612&w=0&k=20&c=mKsWiAqN8lOGl6bdnDg9ssY25RSJJbSOk3g0MuDZNXw=') no-repeat center center fixed;
+  background-size: cover;
+  color: #f1f2f6;
+}
+
+body.night-mode .theme-toggle-btn,
+body.night-mode .restart-btn {
+  background-color: #1e272e;
+  color: #00d2d3;
+  border: 2px solid #00d2d3;
+  box-shadow: 0 4px 10px rgba(0, 210, 211, 0.2);
+}
+
+body.night-mode .score-btn {
+  background: #ff4757;
+  color: #ffffff;
+}
+
+body.night-mode .choice-btn {
+  background-color: #2f3542;
+  color: #f1f2f6;
+  border: 2px solid #ff6b81;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+body.night-mode .move-card, body.night-mode .status-box {
+  background: rgba(47, 53, 66, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.theme-toggle-btn, .restart-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.theme-toggle-btn:hover, .choice-btn:hover, .restart-btn:hover {
+  transform: translateY(-2px);
+}
+
+.score-board {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.score-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.score-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.score-btn {
+  padding: 0.6rem 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.score-divider {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.display-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.move-card {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+}
+
+.move-icon {
+  font-size: 4rem;
+  margin-top: 1rem;
+}
+
+.status-box {
+  padding: 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+  min-width: 250px;
+  backdrop-filter: blur(8px);
+}
+
+.choices-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.choice-btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.restart-btn {
+  font-size: 1.1rem;
+}

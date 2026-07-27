@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stone Paper Scissors Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="day-mode">
+
+  <div class="full-screen-container">
+    <!-- Top Header & Controls -->
+    <header>
+      <h1>Stone Paper Scissors</h1>
+      <button id="theme-btn" class="theme-toggle-btn" onclick="toggleTheme()">
+        🌙 Switch to Dark Mode
+      </button>
+    </header>
+
+    <!-- Score Board Display -->
+    <div class="score-board">
+      <div class="score-box player-score">
+        <span class="score-label">Player</span>
+        <button id="player-score-btn" class="score-btn">0</button>
+      </div>
+      <div class="score-divider">:</div>
+      <div class="score-box computer-score">
+        <span class="score-label">Computer</span>
+        <button id="computer-score-btn" class="score-btn">0</button>
+      </div>
+    </div>
+
+
+    <div class="display-area">
+      <div class="move-card">
+        <h3>Your Move</h3>
+        <p id="player-move" class="move-icon">❓</p>
+      </div>
+      <div class="status-box">
+        <h2 id="round-result">Choose your move to start!</h2>
+      </div>
+      <div class="move-card">
+        <h3>Computer Move</h3>
+        <p id="computer-move" class="move-icon">❓</p>
+      </div>
+    </div>
+
+    <!--Action Buttons -->
+    <div class="choices-container">
+      <button class="choice-btn" onclick="playGame('Stone')">🪨 Stone</button>
+      <button class="choice-btn" onclick="playGame('Paper')">📄 Paper</button>
+      <button class="choice-btn" onclick="playGame('Scissors')">✂️ Scissors</button>
+    </div>
+
+    <!-- Restart Control -->
+    <div class="restart-container">
+      <button id="restart-btn" class="restart-btn" onclick="resetGame()">🔄 Restart Game</button>
+    </div>
+  </div>
+
+  <script src="logic.js"></script>
+</body>
+</html>
